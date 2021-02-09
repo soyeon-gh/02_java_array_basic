@@ -1,5 +1,7 @@
 package step2_01.array;
 
+import java.util.Arrays;
+
 public class ArrayEx01 {
 
 	public static void main(String[] args) {
@@ -25,6 +27,20 @@ public class ArrayEx01 {
 		//java.lang.ArrayIndexOutOfBoundsException:5
 		// 배열의 범위가 넘어설때 나는 에러메세지 ( 해당 에러메세지 암기 )
 		
+		
+		arr[0] = 10;
+		arr[1] = 20;
+		arr[2] = 30;
+		arr[3] = 40;
+		arr[4] = 50;
+		
+		System.out.println("============================");
+		for (int i = 0; i < arr.length; i++) { //arr.length >> 배열의 크기
+			System.out.println(arr[i]);
+		}
+		System.out.println("============================");
+		// (참고) 배열이 익숙해진 후에 사용
+		System.out.println(Arrays.toString(arr));
 	}
 
 }
