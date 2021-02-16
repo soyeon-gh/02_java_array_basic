@@ -3,7 +3,22 @@ package step2_01.array;
 import java.util.Arrays;
 
 public class ArrayEx01 {
-
+	/*
+	 * 
+	 * # 배열 ( array ) 
+	 * 
+	 *  [ 형식 ]
+	 *  
+	 *  1) 자료형[] 배열명 = new 자료형[방의개수];
+	 *  2) 자료형 배열명[] = new 자료형[방의개수];
+	 * 
+	 * 	- '같은 자료형'의 데이터를 '여러개' 저장하기 위한 자료구조
+	 *  - 인덱스 (index) : 0부터 시작하는 방 번호가 부여된다.
+	 *  - 배열은 주소변수이다.
+	 *  - 배열을 크기가 변하지 않는다. 배열을 삭제하여도 배열의 크기는 고정되어있다.
+	 *  - 배열의 요소를 지우는 것은 배열의 초깃값으로 다시 저장하는 것을 의미한다.
+	 * 
+	 * */
 	public static void main(String[] args) {
 
 		// 1. 일반 변수 ( 값 저장 ) 
@@ -41,6 +56,8 @@ public class ArrayEx01 {
 		System.out.println("============================");
 		// (참고) 배열이 익숙해진 후에 사용
 		System.out.println(Arrays.toString(arr));
+		
+		arr = null; // 배열 전체 삭제
 	}
 
 }
