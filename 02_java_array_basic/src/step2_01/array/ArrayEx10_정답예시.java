@@ -60,7 +60,7 @@ public class ArrayEx10_정답예시 {
 				for (int i=0; i<8; i++) {
 					if (lotto3[i] == 7) {
 						cnt++;
-						if (cnt == 3) isWin = true;
+						if (cnt == 3)isWin = true;
 					} 
 					else {
 						cnt = 0;

@@ -24,9 +24,10 @@ public class ArrayEx10_정답 {
 		int sel      = 0;
 		boolean isRunning = true;
 		int cnt = 0;
-		String win = "";
+		
 		while (isRunning) {
-					
+			
+			boolean isTrue = false;
 			System.out.println("\n[1]번복권 결과확인");
 			System.out.println("[2]번복권 결과확인");
 			System.out.println("[3]번복권 결과확인");
@@ -52,11 +53,11 @@ public class ArrayEx10_정답 {
 					if (lotto1[i] == 7) {
 						cnt++;
 						if(cnt == 3) {
-							
+							isTrue = true;
+						}else {
+							cnt = 0;
 						}
-					} else {
-						
-					}
+					} 
 				}
 				
 				
@@ -80,10 +81,10 @@ public class ArrayEx10_정답 {
 					if (lotto2[i] == 7) {
 						cnt++;
 						if(cnt == 3) {
-							System.out.println("당첨");
+							isTrue = true;
+						}else {
+							cnt = 0;
 						}
-					} else {
-						System.out.println("꽝");
 					}
 				}
 				
@@ -107,18 +108,34 @@ public class ArrayEx10_정답 {
 					if (lotto3[i] == 7) {
 						cnt++;
 						if(cnt == 3) {
-							System.out.println("당첨");
+							isTrue = true;
+						}else {
+							cnt = 0;
 						}
-					} else {
-						System.out.println("꽝");
 					}
 				}
 				
 				System.out.println("=========================");
 				
-			} else if (sel == 0) {
+			} else if ( sel == 3 ) {
+				for (int i=0; i<8; i++) {
+					if (lotto3[i] == 7) {
+						cnt++;
+						if (cnt == 3)isTrue = true;
+					} 
+					else {
+						cnt = 0;
+					}
+				}
+			}else if (sel == 0) {
 				System.out.println("복권 결과 확인을 종료합니다.");
 				isRunning = false;
+			}
+			
+			if (isTrue) {
+				System.out.println("당첨");
+			} else {
+				System.out.println("꽝");
 			}
 			
 		}
