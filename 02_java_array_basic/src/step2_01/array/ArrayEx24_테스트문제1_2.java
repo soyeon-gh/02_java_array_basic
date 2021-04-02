@@ -68,7 +68,7 @@ public class ArrayEx24_테스트문제1_2 {
 			System.out.println(" }");
 			
 		} else if(check == -1) {
-			
+			System.out.println("잘못된 답!");
 		}
 		
 		System.out.println();
